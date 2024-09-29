@@ -1,0 +1,79 @@
+@use "../abstract" as a;
+
+.team {
+  width: 100%;
+  padding: 10rem 0;
+  display: grid;
+  justify-items: center;
+  gap: 15rem;
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+  }
+
+  &__figure {
+    max-width: 40rem;
+    height: 45rem;
+    box-shadow: 0 0 2.5rem rgba(0, 0, 0, .4);
+    border-radius: .9rem;
+    overflow: hidden;
+    position: relative;
+    filter: brightness(90%);
+    transition: filter .2s;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+
+  &__figure:hover &__details {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__details {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    h4 {
+      color: var(--white);
+      font-size: 2.4rem;
+      text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .5);
+    }
+
+    p {
+      color: var(--red);
+      font-size: 2.4rem;
+      text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .5);
+    }
+
+    small {
+      color: var(--white);
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      padding: .8rem 1.6rem;
+      background-color: var(--gold-dark-1);
+      color: var(--white);
+      box-shadow: .2rem .2rem .4rem rgba(0, 0, 0, .5);
+      border: none;
+      border-radius: .4rem;
+    }
+  }
+}

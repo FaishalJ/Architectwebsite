@@ -1,0 +1,112 @@
+@use "../abstract" as a;
+
+.btn {
+
+  // btn scroll up
+  &__menu {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 4rem;
+    height: 3rem;
+    @include a.flex-d;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform .3s .2s ease-in;
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: .2rem;
+      background-color: var(--white-dark-1);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--white-dark-1);
+        left: 0;
+      }
+
+      &::before {
+        top: .8rem;
+      }
+
+      &::after {
+        bottom: .8rem;
+      }
+    }
+  }
+
+  // btn scroll up
+  &__scroll__up {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    background-color: var(--gold-dark-1);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 1.6rem;
+    border-radius: .4rem;
+    font-weight: 700;
+    @include a.flex-d;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.40);
+    z-index: 1;
+  }
+
+  // nav button close
+  &__close {
+    position: absolute;
+    cursor: pointer;
+    width: 3rem;
+    height: 2rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: .2rem;
+      background-color: var(--black);
+    }
+
+    &::before {
+      transform-origin: left;
+      transform: rotateZ(45deg);
+      left: .4rem;
+    }
+
+    &::after {
+      transform-origin: right;
+      transform: rotateZ(-45deg);
+      right: .4rem;
+    }
+  }
+
+  // button bunner
+  &__banner {
+    cursor: pointer;
+    font-size: 1.8rem;
+    border: none;
+    background-color: var(--gold-dark-1);
+    padding: 2rem 4rem;
+    color: var(--white);
+    animation: slidein .8s 4.4s backwards ease-in;
+  }
+
+}
+
+// SCRIPT
+.btn__close:hover~.navigation__buttons-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.right {
+  animation: close .4s .2s ease-in backwards;
+}
+.left {
+  animation: open .4s .2s ease-in backwards;
+}

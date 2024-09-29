@@ -1,0 +1,29 @@
+@use "../abstract" as a;
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("images/bg.jpg") center no-repeat;
+  background-size: 130%;
+  transition: background-size 10s .4s ease-in;
+  background-origin: border-box;
+
+  &__description {
+    position: absolute;
+    max-width: 80rem;
+    top: 30%;
+    left: 15%;
+    color: var(--white);
+  }
+
+  &__text {
+    font-size: 4rem;
+    font-family: var(--font-josefin), serif;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    animation: slidein .8s 4.2s backwards ease-in;
+  }
+}

@@ -1,0 +1,86 @@
+@use "../abstract" as a;
+
+.cta {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-2);
+  @include a.flex-d;
+
+  &__container {
+    width: 60%;
+    display: flex;
+  }
+
+  &__img {
+    background-color: red;
+    background: url("images/contact-bg.jpg") no-repeat center/cover;
+    flex: 0 0 30%;
+  }
+
+  &__title {
+    justify-self: center;
+    font-size: 6rem;
+    font-weight: 200;
+  }
+
+  &__form {
+    background-color: var(--white);
+    padding: 5rem 20rem 15rem 20rem;
+    flex: 1;
+
+    display: grid;
+    grid-gap: 5rem 0;
+
+    &-field {
+      position: relative;
+
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        border-bottom: dashed var(--black-2) .2rem;
+        padding: .8rem;
+        color: var(--black);
+
+        &:focus {
+          outline: none;
+          border-bottom: solid var(--black-2) .2rem;
+        }
+
+        &::placeholder {
+          font-family: inherit;
+          font-size: 1.6rem;
+          color: currentColor;
+        }
+
+        &:placeholder-shown~lebel {
+          bottom: 1rem;
+          opacity: 0;
+        }
+      }
+
+      lebel {
+        display: block;
+        position: absolute;
+        left: 0;
+        text-transform: uppercase;
+        color: var(--black-2);
+        font-size: 1.4rem;
+        bottom: 4rem;
+        opacity: 1;
+      }
+    }
+
+    button {
+      border: none;
+      padding: 1rem 3.2rem;
+      background-color: var(--gold-dark-1);
+      color: var(--white);
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .4);
+      cursor: pointer;
+    }
+  }
+}

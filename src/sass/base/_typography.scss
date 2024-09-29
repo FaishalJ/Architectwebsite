@@ -1,0 +1,30 @@
+@use "../abstract" as a;
+
+.title__primary {
+  font-size: 8rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+  line-height: 1;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  animation: slidein .8s 4.1s backwards ease-in;
+}
+
+// sections title
+.section__title {
+  font-size: 6rem;
+  font-weight: 200;
+  color: var(--grey-dark-2);
+  position: relative;
+  padding-bottom: 3rem;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 2.5rem;
+    width: 80%;
+    height: .3rem;
+    background-color: var(--gold-dark-1);
+  }
+}

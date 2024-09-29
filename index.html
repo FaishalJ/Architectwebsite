@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- fontFace -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- fontAwesome -->
+  <script src="https://kit.fontawesome.com/25e6aec2fd.js" crossorigin="anonymous"></script>
+
+  <title>Architect website</title>
+  <link href="src/style.css" rel="stylesheet" type="text/css" />
+  <script defer src="src/script.js"></script>
+</head>
+
+<body>
+  <!-- FIXED POSITIONED ELEMENTS -->
+
+  <!-- overlay -->
+  <div class="overlay">
+    <img src="src/images/Spinner-1s-200px.gif" alt="loading spinner">
+  </div>
+
+  <!-- fixed navigation -->
+  <nav class="navigation">
+    <div class="navigation__buttons">
+      <span class="btn__close">&nbsp;</span>
+      <span class="navigation__buttons-hover">close</span>
+    </div>
+
+    <ul class="navigation__links">
+      <li class="navigation__element"><a href="#home" class="navigation__link">Home</a></li>
+      <li class="navigation__element"><a href="#" class="navigation__link">About Us</a></li>
+      <li class="navigation__element"><a href="#" class="navigation__link">Team</a></li>
+      <li class="navigation__element"><a href="#" class="navigation__link">Pricing</a></li>
+      <li class="navigation__element"><a href="#" class="navigation__link">Contact</a></li>
+    </ul>
+    <div class="navigation__social">
+      <a href="#" class="navigation__social--link"><i class='fab fa-facebook-f'></i></a>
+      <a href="#" class="navigation__social--link"><i class='fab fa-instagram'></i></a>
+      <a href="#" class="navigation__social--link"><i class='fab fa-twitter'></i></a>
+    </div>
+  </nav>
+
+  <!-- btn scroll up -->
+  <a class="btn__scroll__up" href="#home"><i class='fas fa-arrow-up'></i></a>
+
+  <!-- menu button -->
+  <div class="btn__menu">
+    <span>&nbsp;</span>
+  </div>
+
+  <!-- SECTIONS-1 BANNER-->
+  <section class="banner" id="home">
+    <div class="banner__description">
+      <h1 class="title__primary">Architecture & Interior Design</h1>
+      <p class="banner__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <button class="btn__banner">DISCOVER NOW</button>
+    </div>
+  </section>
+
+  <!-- SECTION-2 ABOUT -->
+  <section class="about">
+    <div class="about--title">
+      <h2 class="section__title">About Us</h2>
+    </div>
+    
+    <div class="about__description about__description-1">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed
+        dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!</p>
+    </div>
+    <div class="about__description about__description-2">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed
+        dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!</p>
+    </div>
+    <div class="about__description about__description-3">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed
+        dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!</p>
+    </div>
+    <div class="about__description about__description-4">
+      <img class="about__img" src="src/images/house.png" alt="house image">
+    </div>
+    <div class="about__description about__description-5">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed
+        dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!</p>
+    </div>
+    <div class="about__description about__description-6">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed
+        dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!</p>
+    </div>
+    <div class="about__description about__description-7">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, officia! Necessitatibus delectus sed
+        dicta corrupti voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!</p>
+    </div>
+  </section>
+
+  <!-- SECTION-3 TEAM -->
+  <section class="team">
+    <div class="about--title">
+      <h2 class="section__title">About Us</h2>
+    </div>
+
+    <div class="team__cards">
+      <figure class="team__figure">
+        <img class="team__img" src="src/images/person-1.jpg" alt="person image">
+
+        <div class="team__details">
+          <h4>John Smith</h4>
+          <p>CEO</p>
+          <small>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, impedit!"</small>
+          <button>Read More</button>
+        </div>
+      </figure>
+      <figure class="team__figure">
+        <img class="team__img"  src="src/images/person-2.jpg" alt="person image">
+                <div class="team__details">
+          <h4>Ann Brown</h4>
+          <p>Designer</p>
+          <small>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, impedit!"</small>
+          <button>Read More</button>
+        </div>
+      </figure>
+      <figure class="team__figure">
+        <img class="team__img" src="src/images/person-3.jpg" alt="person image">
+                <div class="team__details">
+          <h4>Mary Doe</h4>
+          <p>Architect</p>
+          <small>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, impedit!"</small>
+          <button>Read More</button>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__container">
+      <div class="cta__img"> this</div>
+      <div class="cta__form">
+        <h2 class="cta__title">Contact</h2>
+        <div class="cta__form-field">
+          <input type="text" id="text" placeholder="FULL NAME" autocomplete="off">
+          <lebel for="text">full name</lebel>
+        </div>
+        <div class="cta__form-field">
+          <input type="email" id="email" placeholder="EMAIL" autocomplete="off">
+          <lebel for="email">email</lebel>
+        </div>
+        <div class="cta__form-field">
+          <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
+          <lebel for="message">message</lebel>
+        </div>
+        <button>submit</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

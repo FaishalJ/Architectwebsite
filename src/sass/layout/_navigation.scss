@@ -1,0 +1,117 @@
+@use "../abstract" as a;
+
+.navigation {
+  position: fixed;
+  height: 100vh;
+  width: 40rem;
+  background-color: var(--white);
+  top: 0;
+  right: -40rem;
+  z-index: 5;
+  transition: transform .4s ease-in-out;
+
+  // navigation...............
+  &__links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    
+    display: grid;
+    grid-gap: 2rem 0;
+  }
+
+  // navigation links.............
+  &__link {
+
+    &:link,
+    &:visited {
+      font-size: 3rem;
+      text-decoration: none;
+      color: var(--grey-dark-2);
+      font-weight: 500;
+      background-position: 100%;
+      transition: background-position .5s ease-in-out;
+    }
+
+    &:hover,
+    &:active {
+      color: transparent;
+      background: linear-gradient(to right, var(--gold-dark-1) 50%, var(--grey-dark-2) 50%);
+      background-clip: text;
+      background-size: 200%;
+      background-position: 0%;
+    }
+  }
+
+  // social links..............
+  &__social {
+    position: absolute;
+    bottom: 5%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    &--link {
+
+      &:link,
+      &:visited {
+        background-color: var(--grey-dark-2);
+        color: var(--white);
+        font-size: 2.4rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        padding: 2rem;
+        @include a.flex-d;
+        transition: background-color .2s ease;
+      }
+
+      &:hover,
+      &:active {
+        background-color: var(--gold-dark-1);
+      }
+    }
+  }
+
+  // navigation buttons container.......
+  &__buttons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 3%;
+    left: 5%;
+    width: 20rem;
+    height: 4rem;
+
+    &-hover {
+      position: absolute;
+      left: 30%;
+      padding: .5rem 3rem;
+      color: var(--white);
+      background-color: var(--gold);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .2s ease-in;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--gold);
+        height: 1.5rem;
+        width: 1.5rem;
+        top: 1.2rem;
+        left: -7px;
+        transform: rotateZ(40deg);
+      }
+    }
+  }
+
+}
+
+// SCRIPT....................
+.show {
+  transform: translateX(-100%);
+}

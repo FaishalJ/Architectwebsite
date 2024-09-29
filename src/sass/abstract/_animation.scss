@@ -1,0 +1,37 @@
+// animation for banner title
+
+@keyframes slidein {
+  0% {
+    transform: translateY(50rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// animation for the hamburg menu
+@keyframes close {
+  0% {
+    transform: translateX(-15rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// animation for nav close button
+@keyframes open {
+  0% {
+    transform: translateX(5rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
